@@ -63,7 +63,6 @@ class MdrapSpider(scrapy.Spider):
         item['date'] = response.meta['article_date']
         item['identifier'] = response.meta['article_slug']
         item['institution'] = 'dezvoltare'
-        item['issuer'] = 'dezvoltare'
 
         type_mapping = {
             'hg': 'HG',
@@ -105,7 +104,7 @@ class MdrapSpider(scrapy.Spider):
         for doc in article_documents:
             item['documents'].append({
                 'type': doc.find('a').text, 
-                'url': doc.find('a')['href']
+                'url': 'http://www.mdrap.gov.ro' + doc.find('a')['href']
                 })
 
         return item
