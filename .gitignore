@@ -213,6 +213,3 @@ ModelManifest.xml
 
 # WebStorm
 .idea
-
-# Intellij
-*.iml

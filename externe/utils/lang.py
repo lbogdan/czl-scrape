@@ -3,8 +3,6 @@ class LangHelper(object):
     FUCK_NO = [
         # new line
         '\n',
-        # tab
-        '\t',
         # non-breaking space
         '\xa0',
         # 0 width space

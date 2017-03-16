@@ -10,6 +10,12 @@ import requests
 class CrawlDezvoltarePipeline(object):
     def process_item(self, item, spider):
         response = requests.post('http://czl-api.code4.ro/api/publications/', headers={'Authorization': 'Token ' + spider.token }, data=item)
+        print '***********'
+        print '***********'
+        print response
+        print response.text
+        print '***********'
+        print '***********'
         return item
 
 

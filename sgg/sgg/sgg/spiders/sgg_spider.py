@@ -75,13 +75,14 @@ class SggSpider(scrapy.Spider):
                 item['identifier'] = identify(institution, titlu)
                 item['title'] = titlu
                 item['type'] = type_
-                item['institution'] = "sgg"
+                item['institution'] = "SGG"
                 item['date'] = consult
                 item['description'] = ""
                 item['feedback_days'] = None
                 item['contact'] = None
                 item['documents'] = docs
 
+                logging.warn("row: %s  "% item)
                 yield item 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-from utils import settings
+from utils import constants
 
 
 class ArticleSerializer:
@@ -9,12 +9,13 @@ class ArticleSerializer:
             identifier=article.identifier,
             title=article.title,
             type=article.article_type,
-            institution=settings.INSTITUTION,
+            institution=constants.INSTITUTION,
             date=article.published_at.isoformat(),
-            description='N\A',
+            description='',
             feedback_days=article.feedback_days,
             contact=article.contact,
             documents=article.documents,
+            issuer=constants.INSTITUTION,
         )
 
     @staticmethod
@@ -23,7 +24,7 @@ class ArticleSerializer:
         :param article: The Article instance to validate
         :return: True or False
         """
-        for field in settings.MANDATORY_FIELDS:
+        for field in constants.MANDATORY_FIELDS:
             if not getattr(article, field):
                 return False
         return True

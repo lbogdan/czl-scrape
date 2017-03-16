@@ -11,8 +11,4 @@ pip install -r requirements.txt
 
 ## Instructiuni
 
-## Altele
-
-Data understading & values
-* [online](https://etherpad.net/p/hackajust)
-* see doc folder
+## Exceptii

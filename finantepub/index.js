@@ -74,7 +74,7 @@ function parsePage(page = 1) {
             }
 
             val.identifier = sha256(val.documents[0].url);
-            val.institution = 'finantepub';
+            val.issuer = 'finantepub';
             val.description = '';
             val.type = guessType(val.label);
             delete val.label;
